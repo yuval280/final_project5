@@ -6,7 +6,7 @@ docker exec joomla-mysql sh -c 'exec mysqldump --no-tablespaces -ujoomla -pjooml
 
 
 Restore for website container:
-docker cp ./backup_html/. joomla-web:/var/www/html
+docker cp ./backup_html/html/. joomla-web:/var/www/html
 
 Restore for db:
 docker exec -i joomla-mysql mysql -ujoomla -pjoomla joomla < backup.sql
